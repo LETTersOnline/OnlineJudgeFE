@@ -61,7 +61,7 @@
     }
   }
   .panel-body {
-    word-break: break-all;
-    word-wrap: break-word;
+    // word-break: break-all;
+    // word-wrap: break-word;
   }
 </style>
