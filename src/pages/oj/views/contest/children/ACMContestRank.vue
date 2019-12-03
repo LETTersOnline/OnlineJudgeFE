@@ -93,7 +93,7 @@
                       })
                   }
                 }
-              }, params.row.user.username)
+              }, params.row.user.username + '(' + params.row.user.real_name + ')')
             }
           },
           {
