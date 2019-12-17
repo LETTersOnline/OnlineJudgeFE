@@ -170,6 +170,11 @@ export default {
       data
     })
   },
+  frozenContest (data) {
+    return ajax('admin/frozen_contest', 'patch', {
+      data
+    })
+  },
   getContestList (offset, limit, keyword) {
     let params = {paging: true, offset, limit}
     if (keyword) {

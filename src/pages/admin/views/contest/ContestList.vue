@@ -69,6 +69,17 @@
           </template>
         </el-table-column>
         <el-table-column
+          width="100"
+          label="Frozen">
+          <template slot-scope="scope">
+            <el-switch v-model="scope.row.frozen"
+                       active-text=""
+                       inactive-text=""
+                       @change="handleFrozenSwitch(scope.row)">
+            </el-switch>
+          </template>
+        </el-table-column>
+        <el-table-column
           fixed="right"
           width="250"
           label="Operation">
@@ -167,6 +178,9 @@
       },
       handleVisibleSwitch (row) {
         api.editContest(row)
+      },
+      handleFrozenSwitch (row) {
+        api.frozenContest(row)
       }
     },
     watch: {
